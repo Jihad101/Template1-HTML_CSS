@@ -1,0 +1,129 @@
+/* Start Variables */
+
+/* End Variables */
+
+/* Start Global Rules */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+.container {
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small Screens */
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+/* Medium Screens */
+@media (min-width: 992px) {
+  .container {
+    width: 992px;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+/* End Global Rules */
+
+/* Start Header */
+.header {
+  padding: 20px;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo {
+  width: 60px;
+}
+.header .links {
+  position: relative;
+}
+.header .links:hover .icon span:nth-child(2) {
+  width: 100%;
+}
+.header .links .icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 25px;
+}
+
+.header .icon span {
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 2px;
+  width: 100%;
+}
+
+.header .icon span:nth-child(2) {
+  width: 70%;
+  transition: 0.3s ease-out;
+}
+
+.header .links ul {
+  position: absolute;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: #f6f6f6;
+  top: calc(100% + 20px);
+  display: none; 
+  min-width: 200px;
+  transition: 0.3s ease;
+}
+
+.header .links:hover ul {
+  display: block;
+}
+
+.header .links ul::before {
+  content: "";
+  position: absolute;
+
+  border: 10px solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  right: 2.5px;
+  top:-20px;
+}
+
+.header .links li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s ease;
+  width: 100%;
+}
+
+.header .links li a:hover {
+  padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
+
+
+/* End Header */
