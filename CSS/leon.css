@@ -29,7 +29,7 @@
 /* Start Global Rules */
 :root {
   --main-color: #10cab7;
-  --secondary-color:#2c4655;
+  --secondary-color: #2c4655;
 }
 * {
   -webkit-box-sizing: border-box;
@@ -73,7 +73,6 @@ body {
 /* Start Header */
 .header {
   padding: 20px;
-  
 }
 .header .container {
   display: flex;
@@ -219,74 +218,78 @@ body {
 /* End Features */
 
 /* Start Services */
-
-.services .container:nth-child(2) {
+/* 
+.services .container .service-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 30px;
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
-.services .container:nth-child(2) .col {
+.services .container .service-content .col {
   display: flex;
   flex-direction: column;
 }
 
-.services .container:nth-child(2) .col .srv {
+.services .container .service-content .col .srv {
   display: flex;
   flex-direction: row;
   border-radius: 15px;
-  box-shadow: -10px 0px 30px -20px black;
-  margin: 10px;
+  /* box-shadow: -10px 0px 30px -20px black; */
+  /* margin: 10px;
 }
-.services .container:nth-child(2) .col i {
+.services .container .service-content .col .srv i {
   color: var(--main-color);
   font-size: 45px;
 }
 
-.services .container:nth-child(2) .col div {
+.services .container .service-content .col .srv div {
   padding: 10px;
 }
 
-.services .container:nth-child(2) .col div .srv-ttl {
+.services .container .service-content .col .srv div .srv-ttl {
   margin: 0;
   font-size: 25px;
   text-align: center;
 }
 
-.services .container:nth-child(2) .col div p {
+.services .container .service-content .col .srv div p {
   font-size: 17px;
   text-align: center;
   line-height: 1.5;
 }
 
-.services .container:nth-child(2) .col img{
-  /* position: relative; */
-  /* z-index: 1; */
-  align-self: flex-end;
-  margin-top: 75px;
-}
-
-.services .container:nth-child(2) .col:last-child{
+.services .container .service-content .col:last-child {
   position: relative;
-
 }
 
+.services .container .service-content .col:last-child img {
+  position: relative;
+  z-index: 1;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  align-self: flex-end;
+  margin-top: 141.125px;
+}
 
-.services .container:nth-child(2) .col img::before{
+.services .container .service-content .col:last-child img::after{
   content: "";
-  position: absolute;
-  height: calc(100% + 50px);
-  width: 50px;
-  right: -25px;
-  top: -25px;
+  height: calc(100% + 60px);
+  width: 60px;
   background-color: var(--secondary-color);
-
-}
+  position: absolute;
+  right: -30px;
+  top: -60px;
+} */
 /* @media (max-width:991px){
   .services .container:nth-child(2) .col img{
     display: none;
   }
-} */
+}
+ */ 
+
+ 
 
 /* End Services */
