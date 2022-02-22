@@ -1,9 +1,36 @@
 /* Start Variables */
 
+.srv-tag {
+  font-size: 100px;
+  text-align: center;
+  color: #77777759;
+  margin: 10px 0 0;
+  width: 100%;
+}
+.srv-tag + p {
+  text-align: center;
+  margin-top: -45px;
+  color: #333;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .srv-tag {
+    font-size: 60px;
+  }
+  .srv-tag + p {
+    font-size: 15px;
+    margin: -30px;
+  }
+}
+
 /* End Variables */
 
 /* Start Global Rules */
-
+:root {
+  --main-color: #10cab7;
+  --secondary-color:#2c4655;
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -15,7 +42,6 @@ body {
 }
 
 .container {
-  margin: auto;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -47,6 +73,7 @@ body {
 /* Start Header */
 .header {
   padding: 20px;
+  
 }
 .header .container {
   display: flex;
@@ -58,6 +85,7 @@ body {
 }
 .header .links {
   position: relative;
+  z-index: 1;
 }
 .header .links:hover .icon span:nth-child(2) {
   width: 100%;
@@ -90,7 +118,7 @@ body {
   list-style: none;
   background-color: #f6f6f6;
   top: calc(100% + 20px);
-  display: none; 
+  display: none;
   min-width: 200px;
   transition: 0.3s ease;
 }
@@ -102,11 +130,10 @@ body {
 .header .links ul::before {
   content: "";
   position: absolute;
-
   border: 10px solid;
   border-color: transparent transparent #f6f6f6 transparent;
   right: 2.5px;
-  top:-20px;
+  top: -20px;
 }
 
 .header .links li a {
@@ -115,7 +142,6 @@ body {
   text-decoration: none;
   color: #333;
   transition: 0.3s ease;
-  width: 100%;
 }
 
 .header .links li a:hover {
@@ -125,5 +151,142 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
-
 /* End Header */
+
+/* Start Landing Section */
+.landing {
+  background-image: url(../Images/3899617.webp);
+  background-size: cover;
+  height: calc(100vh - 64px);
+  position: relative;
+}
+
+.landing .intro-txt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 325px;
+  min-width: 80%;
+}
+.landing .intro-txt .heading {
+  color: var(--main-color);
+  margin: 0;
+  text-align: center;
+  font-size: 50px;
+  line-height: 1.8;
+}
+
+.landing .intro-txt .txt {
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* End Landing Section */
+
+/* Start Features */
+
+.features {
+  padding: 60px 0;
+  background-color: #f6f6f6;
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: gap;
+}
+.features .container .feat {
+  padding: 20px;
+  text-align: center;
+}
+
+.features .container .feat i {
+  color: var(--main-color);
+  font-size: 50px;
+}
+
+.features .container h3 {
+  font-weight: 800;
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.features .container p {
+  line-height: 1.5;
+  font-size: 16px;
+}
+/* End Features */
+
+/* Start Services */
+
+.services .container:nth-child(2) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 100px;
+}
+
+.services .container:nth-child(2) .col {
+  display: flex;
+  flex-direction: column;
+}
+
+.services .container:nth-child(2) .col .srv {
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  box-shadow: -10px 0px 30px -20px black;
+  margin: 10px;
+}
+.services .container:nth-child(2) .col i {
+  color: var(--main-color);
+  font-size: 45px;
+}
+
+.services .container:nth-child(2) .col div {
+  padding: 10px;
+}
+
+.services .container:nth-child(2) .col div .srv-ttl {
+  margin: 0;
+  font-size: 25px;
+  text-align: center;
+}
+
+.services .container:nth-child(2) .col div p {
+  font-size: 17px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.services .container:nth-child(2) .col img{
+  /* position: relative; */
+  /* z-index: 1; */
+  align-self: flex-end;
+  margin-top: 75px;
+}
+
+.services .container:nth-child(2) .col:last-child{
+  position: relative;
+
+}
+
+
+.services .container:nth-child(2) .col img::before{
+  content: "";
+  position: absolute;
+  height: calc(100% + 50px);
+  width: 50px;
+  right: -25px;
+  top: -25px;
+  background-color: var(--secondary-color);
+
+}
+/* @media (max-width:991px){
+  .services .container:nth-child(2) .col img{
+    display: none;
+  }
+} */
+
+/* End Services */
